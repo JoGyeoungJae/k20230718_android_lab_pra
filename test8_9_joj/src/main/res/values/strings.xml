@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">test8_9_joj</string>
+    <string name="test_name1">속성에서 선언하는 메서드에는 위 예와 같이 정확하게 서명이 있어야 합니다. 특히 메서드는 다음 사항을 충족해야 합니다.</string>
+    <string name="test_name2">속성에서 선언하는 메서드에는 위 예와 같이 정확하게 서명이 있어야 합니다. 특히 메서드는 다음 사항을 </string>
+    <string name="test_name3">속성에서 선언하는 메서드에는 위 예와 같이 정확하게 서명이 있어야 합니다. 특히 메서드는 </string>
+    <string name="test_name4">속성에서 선언하는 메서드에는 위 예와 같이 정확하게 서명이 있어야 합니다.</string>
+    <dimen name="height1">100dp</dimen>
+    <dimen name="width1">100dp</dimen>
+    <dimen name="height2">80dp</dimen>
+    <dimen name="width2">80dp</dimen>
+    <dimen name="height3">50dp</dimen>
+    <dimen name="width3">50dp</dimen>
+    <dimen name="marginT">30dp</dimen>
+    <dimen name="Tsize">30sp</dimen>
 </resources>

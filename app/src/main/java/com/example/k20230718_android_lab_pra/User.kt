@@ -2,23 +2,49 @@ package com.example.k20230718_android_lab_pra
 
 import java.util.Scanner
 
-
-class Test {
-
+class User(val name :String,val id :String,val pw:String,val email:String,val phone:String) {
 
 }
-
+/*class LoginTest{
+    companion object{
+        fun login(user :User){
+            if(user.id == insertId && user.pw == insertPw){
+                println("로그인 성공")
+            }
+        }
+    }
+}*/
+    val sc =  Scanner(System.`in`)
 fun main() {
-    var sc =  Scanner(System.`in`);
     print("이름:")
-    sc.next();
+    val name :String = sc.next()
     print("ID:")
-    sc.next();
+    val id :String =  sc.next()
     print("PW:")
-    sc.next();
+    val pw :String =  sc.next()
     print("email:")
-    sc.next();
+    val email :String =  sc.next()
     print("phone:")
-    sc.next();
+    val phone :String =  sc.next()
+    val user = User(name,id,pw,email,phone)
+    var flag = true
+    while (true){
+        println("로그인")
+        print("아이디 : ")
+        val insertId = sc.next()
+        print("비밀번호 :")
+        val insertPw = sc.next()
+        if(user.id == insertId && user.pw == insertPw){
+            println("로그인 성공")
+            println("=========================")
+            flag = false
+        }else{
+            println("로그인 실패")
+            println("=========================")
+        }
+        if(!flag){
+            break
+        }
+    }
 
 }

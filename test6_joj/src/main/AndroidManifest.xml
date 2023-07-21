@@ -9,6 +9,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.K20230718_Android_Lab_Pra">
         <activity
+            android:name=".JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

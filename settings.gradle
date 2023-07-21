@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "K20230718_Android_Lab_Pra"
 include ':app'
+include ':test6_joj'
+include ':test8_9_joj'
+include ':test10_11_12joj'
