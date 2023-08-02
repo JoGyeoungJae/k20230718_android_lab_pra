@@ -1,4 +1,4 @@
-package com.example.test10_11_12joj
+package com.example.firebasettest20
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

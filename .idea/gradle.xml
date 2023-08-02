@@ -5,13 +5,23 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/gradle-8.2.1-all/gradle-8.2.1" />
+        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/0725test" />
+            <option value="$PROJECT_DIR$/0725test/firebasetest20" />
+            <option value="$PROJECT_DIR$/0725test/myex" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/firebasettest20" />
+            <option value="$PROJECT_DIR$/googlemaptest" />
+            <option value="$PROJECT_DIR$/myexample" />
             <option value="$PROJECT_DIR$/test10_11_12joj" />
+            <option value="$PROJECT_DIR$/test13_16_17_18" />
+            <option value="$PROJECT_DIR$/test13_16_17_18/firebasettest20" />
             <option value="$PROJECT_DIR$/test6_joj" />
             <option value="$PROJECT_DIR$/test8_9_joj" />
           </set>

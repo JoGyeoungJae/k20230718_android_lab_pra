@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 연락처 이용한다는 권한 설정 -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" /> <!-- 외부 통신을 위해서 인터넷 사용 권한 요청. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 네트워크 접근 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 미디어 서버 접근 시 허가 부분이 변경이 됨 일단 예전꺼 비교해서 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- 위치의 권한을 요청 정확도까지 세트로 같이 요처 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+<!--android:name=".test18reqres.MyApplication" 메니페스트에 등록하면 전역에서 사용 가능-->
+    <application
+        android:name=".test18reqres.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.K20230718_Android_Lab_Pra">
+        <activity
+            android:name=".test18reqres.MainActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".test18reqres.MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".test18reqres.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test18.MainActivity581"
+            android:exported="true" />
+        <activity
+            android:name=".test18.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test17crud.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test17.SettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test17.AddActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test17.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test16_multiImg.MainActivity"
+            android:exported="true" /> <!-- 콘텐츠 프로바이더 사용하기 위해서 사전 작업 -->
+        <!--
+    authorities -> 각자 패키지 명으로 변경
+                com.example.test13_16_17_18.test16
+                변경전 :com.example.ch16_provider.fileprovider
+                변경후:om.example.test13_16_17_18.test16.fileprovider
+
+                2 파일의 경로 위치를 res에 정의해서 가져와 사용하기
+                @xml/file_paths
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.test13_16_17_18.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".test16.ImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity443"
+            android:exported="true" />
+        <activity
+            android:name=".test13.Test"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity424"
+            android:exported="true" />
+        <activity
+            android:name=".test16.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity414"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity408"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity406"
+            android:exported="true" />
+        <activity
+            android:name=".test13.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test13.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
