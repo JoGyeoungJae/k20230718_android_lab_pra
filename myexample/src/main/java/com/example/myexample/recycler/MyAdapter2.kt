@@ -58,29 +58,13 @@ class MyAdapter2(val context: Context, val datas: List<ItemModel4>?): RecyclerVi
         val binding2=(holder as MyViewHolder2).binding
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ItemActivity::class.java)
-            intent.putExtra("id",user?.UC_SEQ.toString())
-            intent.putExtra("TITLE",user?.TITLE.toString())
-            intent.putExtra("CNTCT_TEL",user?.CNTCT_TEL.toString())
-            intent.putExtra("LAT",user?.LAT.toString())
-            intent.putExtra("LNG",user?.LNG.toString())
-            val img = user?.MAIN_IMG_NORMAL
-            Glide.with(context)
-                .asBitmap()
-                .load(img)
-                .into(object : CustomTarget<Bitmap>(200, 200) {
-                    override fun onResourceReady(
-                        resource: Bitmap,
-                        transition: Transition<in Bitmap>?
-                    ) {
-                        R.layout.activity_item.
-                        intent.putExtra("imgpath",resource)
-//                    Log.d("lsy", "width : ${resource.width}, height: ${resource.height}")
-                    }
+            intent.putExtra("id",user?.UC_SEQ)
+            intent.putExtra("TITLE",user?.TITLE)
+            intent.putExtra("CNTCT_TEL",user?.CNTCT_TEL)
+            intent.putExtra("LAT",user?.LAT)
+            intent.putExtra("LNG",user?.LNG)
+            intent.putExtra("MAIN_IMG_NORMAL",user?.MAIN_IMG_NORMAL)
 
-                    override fun onLoadCleared(placeholder: Drawable?) {
-                        TODO("Not yet implemented")
-                    }
-                })
             context.startActivity(intent)
         }
 

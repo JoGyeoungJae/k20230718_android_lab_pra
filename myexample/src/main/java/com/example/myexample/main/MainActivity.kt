@@ -23,9 +23,10 @@ class MainActivity : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //====================토글 메뉴==========================
         setSupportActionBar(binding.toolbar)
         toggle = ActionBarDrawerToggle(
             this,
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
+        //====================토글 메뉴==========================
         /*뷰페이저 2 구현 - 프레그먼트 방식으로 연결 */
         val adapter= MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
